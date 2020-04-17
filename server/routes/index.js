@@ -1,5 +1,6 @@
 const usersController = require('../controllers').users;
-//const userItemsController = require('../controllers').userItems;
+const attendanceController = require('../controllers').attendances;
+
 
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -9,5 +10,8 @@ module.exports = (app) => {
   app.post('/api/users', usersController.create);
   app.get('/api/users', usersController.list);
   app.delete('/api/users/:userId', usersController.destroy);
+  app.post('/api/attendances', attendanceController.create);
+  app.get('/api/attendances', attendanceController.list);
+  app.delete('/api/attendances/:userId', attendanceController.destroy);
 
 };
