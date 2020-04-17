@@ -9,7 +9,7 @@ module.exports = {
         lesson_id: req.body.lesson_id,
         points: req.body.body
       })
-      .then((Attendance) => res.status(201).send(Attendance))
+      .then((attendance) => res.status(201).send(attendance))
       .catch((error) => res.status(400).send(error));
   },
 
