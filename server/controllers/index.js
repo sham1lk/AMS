@@ -3,5 +3,5 @@ const attendances = require('./attendances');
 
 module.exports = {
   users,
-  attendances,
+  attendances
 };
