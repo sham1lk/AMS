@@ -5,7 +5,7 @@ module.exports = {
     return User
       .create({
         type: req.body.type,
-        google_id:req.body.type,
+        google_id:req.body.google_id,
       })
       .then((user) => res.status(201).send(user))
       .catch((error) => res.status(400).send(error));
