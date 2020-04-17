@@ -4,8 +4,6 @@ module.exports = {
   create(req, res) {
     return Attendance
       .create({
-        type: req.body.type,
-        google_id:req.body.google_id,
         t_google_id: req.body.t_google_id,
         student_fullname: req.body.student_fullname,
         lesson_id: req.body.lesson_id,
