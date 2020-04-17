@@ -9,11 +9,9 @@ module.exports = {
       },
       title: {
         type: Sequelize.STRING,
-        allowNull: false,
       },
       google_id:{
       type: Sequelize.STRING,
-      allowNull: false,
       },
       createdAt: {
         allowNull: false,
