@@ -7,7 +7,7 @@ module.exports = {
         t_google_id: req.body.t_google_id,
         student_fullname: req.body.student_fullname,
         lesson_id: req.body.lesson_id,
-        points: req.body.body
+        points: req.body.points,
       })
       .then((attendance) => res.status(201).send(attendance))
       .catch((error) => res.status(400).send(error));
