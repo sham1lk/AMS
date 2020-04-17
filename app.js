@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -12,4 +12,4 @@ app.get('*', (req, res) => res.status(200).send({
   message: 'Welcome to the beginning of nothingness.',
 }));
 
-module.exports = app;
+app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
