@@ -7,7 +7,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      title: {
+      type: {
         type: Sequelize.STRING,
       },
       google_id:{
