@@ -14,5 +14,14 @@
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
+  },
+  "production": {
+    "username": "Shamil",
+    "password": "password",
+    "database": "production",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "use_env_variable": "DATABASE_URL"
   }
 }
