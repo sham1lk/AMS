@@ -9,7 +9,7 @@ module.exports = (app) => {
 
   app.post('/api/users', usersController.create);
   app.get('/api/users', usersController.list);
-  app.delete('/api/users/:userId', usersController.destroy);
+  app.delete('/api/users/:id', usersController.destroy);
   app.post('/api/attendances', attendanceController.create);
   app.get('/api/attendances', attendanceController.list);
   app.delete('/api/attendances/:attendanceId', attendanceController.destroy);
