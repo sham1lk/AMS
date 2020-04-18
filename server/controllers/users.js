@@ -22,7 +22,7 @@ module.exports = {
 
   destroy(req, res) {
     return User
-      .findById(req.params.userId)
+      .findById(req.body.google_id)
       .then(user => {
         if (!user) {
           return res.status(400).send({
