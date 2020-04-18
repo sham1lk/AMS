@@ -45,7 +45,8 @@ module.exports = {
       });
     });
   },
-  destroy(req, res) {
+
+  update(req, res) {
 
     const id = req.params.id;
 
@@ -68,7 +69,7 @@ module.exports = {
             message: "Error updating Attendance with id=" + id
           });
         });
-  }
+  },
 
 
 };
