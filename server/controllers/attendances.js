@@ -23,19 +23,26 @@ module.exports = {
  
 
   destroy(req, res) {
-    return Attendance
-      .findById(req.params.AttendanceId)
-      .then(Attendance => {
-        if (!Attendance) {
-          return res.status(400).send({
-            message: 'Attendance Not Found',
-          });
-        }
-        return Attendance
-          .destroy()
-          .then(() => res.status(204).send())
-          .catch((error) => res.status(400).send(error));
-      })
-      .catch((error) => res.status(400).send(error));
+  const id = req.params.id;
+
+  Attendance.destroy({
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "User was deleted successfully!"
+        });
+      } else {
+        res.send({
+          message: `Cannot delete User with id=${id}. Maybe Tutorial was not found!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Could not delete User with id=" + id
+      });
+    });
   },
 };
