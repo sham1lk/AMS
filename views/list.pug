@@ -1,0 +1,10 @@
+block content
+h1= title
+  form(action="/" method="POST")
+
+    label.label lesson_id
+      input.input(type="text" name="lesson_id" placeholder="SWP/18.04")
+      
+each att in attendances
+  p #{att.student_fullname} #{att.points}
+a(href='/') Back

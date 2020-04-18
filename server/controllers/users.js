@@ -33,7 +33,7 @@ module.exports = {
         });
       } else {
         res.send({
-          message: `Cannot delete User with id=${id}. Maybe Tutorial was not found!`
+          message: `Cannot delete User with id=${id}.`
         });
       }
     })
