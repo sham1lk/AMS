@@ -12,6 +12,6 @@ module.exports = (app) => {
   app.delete('/api/users/:id', usersController.destroy);
   app.post('/api/attendances', attendanceController.create);
   app.get('/api/attendances', attendanceController.list);
-  app.delete('/api/attendances/:attendanceId', attendanceController.destroy);
+  app.delete('/api/attendances/:id', attendanceController.destroy);
 
 };
