@@ -13,5 +13,6 @@ module.exports = (app) => {
   app.post('/api/attendances', attendanceController.create);
   app.get('/api/attendances', attendanceController.list);
   app.delete('/api/attendances/:id', attendanceController.destroy);
+  app.put('/api/attendances/:id', attendanceController.update);
 
 };

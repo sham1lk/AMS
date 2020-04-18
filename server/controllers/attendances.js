@@ -45,4 +45,30 @@ module.exports = {
       });
     });
   },
+  destroy(req, res) {
+
+    const id = req.params.id;
+
+      Attendance.update(req.body, {
+        where: { id: id }
+      })
+        .then(num => {
+          if (num == 1) {
+            res.send({
+              message: "was updated successfully."
+            });
+          } else {
+            res.send({
+              message: `Cannot update id=${id}.`
+            });
+          }
+        })
+        .catch(err => {
+          res.status(500).send({
+            message: "Error updating Attendance with id=" + id
+          });
+        });
+  }
+
+
 };
