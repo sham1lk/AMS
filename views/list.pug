@@ -11,6 +11,7 @@ html
 
       label.label lesson_id
         input.input(type="text" name="lesson_id" placeholder="SWP/18.04")
-      
-  each att in attendances
-    p #{att.student_fullname} #{att.points}
+  ul.list-group    
+    each att in attendances
+    li.list-group-item
+      p #{att.student_fullname} #{att.points}
