@@ -8,7 +8,7 @@ module.exports = {
   },
 
   list(req, res) {
-    let id = body.lesson_id
+    let id = req.body.lesson_id
     return Attendance
       .findAll({ where: { lesson_id: id }})
       .then((attendances) => res.render('list',{title:"Attendance list", attendances:attendances}))
