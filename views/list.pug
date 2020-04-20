@@ -1,10 +1,17 @@
 block content
-h1= title
-  form(action="/" method="POST")
+doctype html
+html
+	head
+		title AttendanceList
+		link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet' href='/css/style.css')
 
-    label.label lesson_id
-      input.input(type="text" name="lesson_id" placeholder="SWP/18.04")
+	body
+		h1= title
+		form(action="/" method="POST")
+			label.label lesson_id
+			input.input(type="text" name="lesson_id" placeholder="SWP/18.04")
       
-each att in attendances
-  p #{att.student_fullname} #{att.points}
-a(href='/') Back
+		each att in attendances
+			li.list-group-item
+  				a #{att.student_fullname} #{att.points}
