@@ -1,17 +1,9 @@
 block content
-doctype html
-html
-	head
-		title AttendanceList
-		link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
-		link(rel='stylesheet' href='/css/style.css')
+h1= title
+  form(action="/" method="POST")
 
-	body
-		h1= title
-		form(action="/" method="POST")
-			label.label lesson_id
-			input.input(type="text" name="lesson_id" placeholder="SWP/18.04")
+    label.label lesson_id
+      input.input(type="text" name="lesson_id" placeholder="SWP/18.04")
       
-		each att in attendances
-			li.list-group-item
-  				p #{att.student_fullname} #{att.points}
+each att in attendances
+  p #{att.student_fullname} #{att.points}
