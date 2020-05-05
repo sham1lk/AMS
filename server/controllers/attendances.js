@@ -8,6 +8,8 @@ module.exports = {
         student_fullname: req.body.student_fullname,
         lesson_id: req.body.lesson_id,
         points: req.body.points,
+        type: req.body.type,
+        subject: req.body.subject,
       })
       .then((attendance) => res.status(201).send(attendance))
       .catch((error) => res.status(400).send(error));
