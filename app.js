@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Set views folde
 app.set('views', './views');
-app.set('view engine', 'pug');
+app.set('view engine', 'vash');
 
 require('./server/routes')(app);
 

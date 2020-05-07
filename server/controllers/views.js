@@ -15,4 +15,12 @@ module.exports = {
       .catch((error) => res.status(400).send(error));
   },
 
+  index(req,res){
+    res.render('index1',{ title: 'Vash Template Demo', 
+                          content:'This is dummy paragraph.'});
+  },
+  about(req,res){
+    let arr = ["hi", "hello"];
+    res.render('about',{ title: 'About', item: arr});
+  },
 };
