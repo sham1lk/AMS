@@ -1,248 +1,90 @@
 @html.extend('layout',function(model){
 	@html.block('body',function(model){
 
-	  <style>
-	html {
-	justify-content: center;
+<style>
+#mainselection select {
+	 border-radius: 10px;
+	 border: 0;
+	 color: #EEE;
+	 background: #58B14C;
+	 font-size: 20px;
+	 font-weight: bold;
+	 padding: 10px 10px;
+	 width: 378px;
+	 *width: 350px;
+	 *background: #58B14C;
+	 -webkit-appearance: none;
+	 margin-top:10px;
+	 margin-left:-13px;
+}
+ #mainselection {
+ 	font-size: 20px;
+	 font-weight: bold;
+ 	margin-left:10px;
+ 	margin-top:20px;
+	 overflow: hidden;
+	 width: 350px;
+	 -moz-border-radius: 9px 9px 9px 9px;
+	 -webkit-border-radius: 9px 9px 9px 9px;
+	 border-radius: 9px 9px 9px 9px;
+	 box-shadow: 1px 1px 11px #330033;
+	 background: #1369a2;
 }
 
-html body {
-	margin: 0;
-	background: #2980b9;
-	background: linear-gradient(to right, #2980b9, #2c3e50);
-	font-family: 'Montserrat', sans-serif;
-}
-
-.heading {
-	color: #fff;
-	text-align: center;
-}
-
-.heading h1 {
-	margin-bottom: 3rem;
-	font-weight: 300;
-	position: relative;
-}
-
-.heading h1:after {
-	content: '';
-	height: 2px;
-	width: 2rem;
-	position: absolute;
-	left: 50%;
-	bottom: -1rem;
-	transform: translateX(-50%);
-	background-color: #fff;
-}
-
-.container {
-	background-color: #fff;
-	padding: 1rem;
-	box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
-}
-
-.container .nav {
-	background-color: #fafafa;
-	padding: 1rem;
-	margin: 0 -3rem 2rem;
-	box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-	position: relative;
-}
-
-.container .nav:before,
-.container .nav:after {
-	content: '';
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 0;
-	border: 0.75rem solid transparent;
-	border-bottom: 0.75rem solid #f2f0f0;
-	transform-origin: center;
-	box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-	z-index: -1;
-}
-
-.container .nav:before {
-	left: 0;
-	transform: translateY(-0.45rem) rotate(135deg) translateX(-0.4rem);
-}
-
-.container .nav:after {
-	right: 0;
-	transform: translateY(-0.45rem) rotate(-135deg) translateX(0.4rem);
-}
-
-.container .nav a {
-	margin: 0 3rem;
-	font-size: 2rem;
-	color: #2980b9;
-	opacity: 0.7;
-	transition: 0.25s;
-}
-
-.container .nav a:hover {
-	opacity: 1;
-}
-
-.container .list .num {
-	padding: 0.5rem 2rem;
-	align-items: center;
-	justify-content: flex-start;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(0):before {
-	content: '0';
-	font-size: 2rem;
+.hi{
+	border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	box-shadow: none;
+	margin-left:-14px;
+	border-radius: 10px;
+	background: #58B14C;
+	font-size: 15px;
 	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
+	width: 382px;
+	margin-top:10px;
 }
 
-.container .list .num:nth-child(1):before {
-	content: '1';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	opacity: 0.05;
-	transition: 0.25s;
+.hi1{
+	border-radius: 10px;
+	 border: 0;
+font-size: 20px;
+font-weight: bold;
+padding: 10px 10px;
+width: 359px;
+margin-top:10px;
+margin-left:-13px;
 }
-
-.container .list .num:nth-child(2):before {
-	content: '2';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(3):before {
-	content: '3';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(4):before {
-	content: '4';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(5):before {
-	content: '5';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(6):before {
-	content: '6';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(7):before {
-	content: '7';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(8):before {
-	content: '8';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num:nth-child(9):before {
-	content: '9';
-	font-size: 2rem;
-	font-weight: bold;
-	color: #000;
-	width: 2rem;
-	opacity: 0.05;
-	transition: 0.25s;
-}
-
-.container .list .num h3 {
-	position: relative;
-	left: -1.5rem;
-	color: #3d3d3d;
-	font-size: 1.85rem;
-	transition: 0.25s;
-}
-
-.container .list .num:hover {
-	background-color: #fafafa;
-	cursor: pointer;
-}
-
-.container .list .num:hover:before {
-	opacity: 0.2;
-}
-
-.container .list .num:hover h3 {
-	left: 1rem;
-}
-
-.message {
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 2rem;
-}
-
-
-
-
-
+ 
 
 </style>
 
+<div class="hi" id="mainselection">
 
-<div class="custom-select">
-  <select>
-    <option value="0">Select car:</option>
-    <option value="1">Audi</option>
-    <option value="2">BMW</option>
-    <option value="3">Citroen</option>
-    <option value="4">Ford</option>
-    <option value="5">Honda</option>
-    <option value="6">Jaguar</option>
-    <option value="7">Land Rover</option>
-    <option value="8">Mercedes</option>
-    <option value="9">Mini</option>
-    <option value="10">Nissan</option>
-    <option value="11">Toyota</option>
-    <option value="12">Volvo</option>
-  </select>
+<form action="/about" method="post" class="myselect">
+
+<select name="subject" >
+<option value="">Select course</option>
+<option value="">SWP</option>
+<option value="ProbStat">ProbStat</option>
+<option value="Networks">Networks</option>
+</select>
+<select name="type">
+<option value="">Select type of the lesson</option>
+<option value="Lab">Lab</option>
+<option value="Lecture">Lecture</option>
+<option value="Tutorial">Tutorial</option>
+</select>
+<input type="date" id="start" name="trip-start" class="hi1"
+       value="2020-07-22"
+       min="2020-01-01" max="2021-01-01">
+<input type="submit" value="Show participants" class="hi">
+</form>
 </div>
+
 <div class="heading">
     <h1>Attendance Table</h1>
 </div>

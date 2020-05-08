@@ -23,4 +23,12 @@ module.exports = {
     let arr = ["hi", "hello"];
     res.render('about',{ title: 'About', item: arr});
   },
+  aboutpost(req, res) {
+    let type = req.body.type
+    return Attendance
+      .findAll({ where: {type : type }})
+      .then((attendances) => res.render('about',{ title: 'About', item: attendances}))
+      .catch((error) => res.status(400).send(error));
+  },
+
 };

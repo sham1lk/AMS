@@ -21,4 +21,6 @@ module.exports = (app) => {
   app.get('/',viewController.index);
   app.post('/',viewController.list);
     app.get('/about',viewController.about);
+   app.post('/about',viewController.aboutpost);
+
 };
