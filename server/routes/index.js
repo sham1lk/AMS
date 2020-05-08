@@ -18,9 +18,8 @@ module.exports = (app) => {
   app.put('/api/attendances/:id', attendanceController.update);
 
   //views
-  app.get('/',viewController.index);
-  app.post('/',viewController.list);
-    app.get('/about',viewController.about);
-   app.post('/about',viewController.aboutpost);
+  app.get('/about',viewController.index);
+    app.get('/',viewController.about);
+   app.post('/',viewController.aboutpost);
 
 };
