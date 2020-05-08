@@ -64,7 +64,7 @@ margin-left:-13px;
 
 <div class="hi" id="mainselection">
 
-<form action="/about" method="post" class="myselect">
+<form action="/" method="post" class="myselect">
 
 <select name="subject" >
 <option value="">Select course</option>

@@ -11,6 +11,7 @@ module.exports = {
     let arr = [];
     res.render('about',{ title: 'AMS', item: arr});
   },
+
   aboutpost(req, res) {
     let type = req.body.type
     return Attendance
@@ -20,7 +21,7 @@ module.exports = {
           subject: req.body.subject
           
           }})
-      .then((attendances) => res.render('about',{ title: 'About', item: attendances}))
+      .then((attendances) => res.render('about',{ title: 'AMS', item: attendances}))
       .catch((error) => res.status(400).send(error));
   },
 
