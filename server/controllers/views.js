@@ -28,7 +28,7 @@ module.exports = {
     return Attendance
       .findAll({ 
         where: {
-          type : req.body.type
+          type : req.body.type,
           subject: req.body.subject
           
           }})
