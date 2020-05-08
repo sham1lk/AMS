@@ -4,7 +4,7 @@ const Attendance = require('../models').Attendance;
 module.exports = {  
 
   index(req,res){
-    res.render('index1',{ title: 'About Automated Attendance Monitoring', 
+    res.render('index',{ title: 'About Automated Attendance Monitoring', 
                           content:'Something very important'});
   },
   about(req,res){
