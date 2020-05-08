@@ -26,7 +26,12 @@ module.exports = {
   aboutpost(req, res) {
     let type = req.body.type
     return Attendance
-      .findAll({ where: {type : type }})
+      .findAll({ 
+        where: {
+          type : req.body.type
+          subject: req.body.subject
+          
+          }})
       .then((attendances) => res.render('about',{ title: 'About', item: attendances}))
       .catch((error) => res.status(400).send(error));
   },
