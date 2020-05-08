@@ -68,7 +68,7 @@ margin-left:-13px;
 
 <select name="subject" >
 <option value="">Select course</option>
-<option value="">SWP</option>
+<option value="SWP">SWP</option>
 <option value="ProbStat">ProbStat</option>
 <option value="Networks">Networks</option>
 </select>
