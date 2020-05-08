@@ -92,7 +92,7 @@ margin-left:-13px;
     <div class="list">
     	@model.item.forEach(function(item){
 		<div class="num">
-            <h3>@item</h3>
+            <h3>@item.student_fullname </h3>
         </div>
 		})
 
