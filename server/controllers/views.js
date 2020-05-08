@@ -8,8 +8,8 @@ module.exports = {
                           content:'Something very important'});
   },
   about(req,res){
-    let arr = ["hi", "hello"];
-    res.render('about',{ title: 'About', item: arr});
+    let arr = [];
+    res.render('about',{ title: 'AMS', item: arr});
   },
   aboutpost(req, res) {
     let type = req.body.type
